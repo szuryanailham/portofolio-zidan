@@ -73,8 +73,13 @@ export default function Home() {
           <FaCommentDots size={18} /> Kritik & Saran
         </Link> */}
       </div>
-
-      <footer className="mt-5 text-center text-sm text-gray-400">© {new Date().getFullYear()} IamSuryana. All rights reserved.</footer>
+      <footer className="mt-10 text-center text-xs text-gray-500 tracking-wide">
+        © {new Date().getFullYear()}{" "}
+        <a href="https://ilham-portofolio-neon.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300 transition">
+          Ilham Suryana
+        </a>{" "}
+        — All rights reserved.
+      </footer>
     </div>
   );
 }
