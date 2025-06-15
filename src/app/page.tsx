@@ -1,103 +1,80 @@
 import Image from "next/image";
+import Link from "next/link";
+import { images } from "@/app/libs/images";
+import { FaTags, FaRegImages, FaGift, FaFilm, FaSlidersH, FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col items-center mt-10 space-y-4">
+      {/* Foto Profil */}
+      <div className="w-[180px] h-[180px] relative rounded-full overflow-hidden border-4 border-white shadow-lg">
+        <Image src={images.cover} alt="Foto Portfolio" fill className="object-cover" />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      {/* Typography Profil */}
+      <div className="text-center space-y-3 mt-4">
+        <h1 className="text-3xl font-bold text-gray-800">Zidan Naim</h1>
+        <p className="text-sm text-gray-500">Photographer & Videography</p>
+        <p className="text-base text-gray-600 max-w-xs mx-auto">Fotografer dan videografer profesional yang berfokus pada penciptaan narasi visual yang kuat dan bermakna.</p>
+
+        {/* Sosmed */}
+        <div className="flex justify-center items-center gap-4 mt-2">
+          <a href="https://wa.me/62882006821924" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-500 transition" aria-label="WhatsApp">
+            <FaWhatsapp size={24} />
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          <a href="https://instagram.com/naimdzulfikri" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-500 transition" aria-label="Instagram">
+            <FaInstagram size={24} />
+          </a>
+          <a href="https://www.tiktok.com/@naimdzulfikri" target="_blank" rel="noopener noreferrer" className="text-black hover:text-gray-500 transition" aria-label="TikTok">
+            <FaTiktok size={24} />
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      </div>
+
+      {/* Full Width Button Menu dengan Link */}
+      <div className="flex flex-col w-full max-w-sm mt-3 space-y-3 px-6">
+        <Link href="/portofolio" className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-full shadow hover:bg-gray-800 transition">
+          <FaRegImages size={18} /> Lihat Portfolio
+        </Link>
+        <Link href="/portfolio" className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 rounded-full text-gray-800 hover:bg-gray-100 transition">
+          <FaTags size={18} /> Paket Harga
+        </Link>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://drive.google.com/drive/mobile/folders/1MHpHzx2g7o0TzlUZkoAidKRsRJPK7dZx?fbclid=PAQ0xDSwK7tedleHRuA2FlbQIxMQABp8nKAHUNLwcn3Gbo2vUqaqTIm1jlkseM21Tl-0-jkooOuFqNDnzWp6vK58ZV_aem_BFS0qkWYWVs_KBGkTJXzNw"
           target="_blank"
           rel="noopener noreferrer"
+          className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 rounded-full text-gray-800 hover:bg-gray-100 transition"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          <FaGift size={18} /> Free Preset New
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
+          href="https://drive.google.com/drive/mobile/folders/1xGByMnucKEORwjmK077dq5VXNaV3XoTC?usp=sharing&fbclid=PAQ0xDSwK7tydleHRuA2FlbQIxMQABp9XeixIKxi0-K2pRCvh3t1XuLrzCHNg-sn7C_sMX9mi3Mx5wUMkxjw0ytf_M_aem_-133QwK97mfbXxV5T1HB5w"
+          className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 rounded-full text-gray-800 hover:bg-gray-100 transition"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <FaFilm size={18} /> Free Footage
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
+          href="https://lynk.id/naimdzulfikri?fbclid=PAQ0xDSwK7t8VleHRuA2FlbQIxMQABpzm4XibWXceekGj95cuE4t3KGpX5HyLFZ5rEOEqJOj1qtsY17rS3SHxvghIn_aem_aXDFoCrpcQQUfP_0e3rwsg"
+          className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-300 rounded-full text-gray-800 hover:bg-gray-100 transition"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          <FaSlidersH size={18} /> Luts Cinematic
         </a>
-      </footer>
+        {/* <Link
+          href="/reservasi"
+          className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-full shadow-lg hover:from-yellow-600 hover:to-orange-600 transition"
+        >
+          <FaCalendarAlt size={18} /> Reservasi Sekarang
+        </Link> */}
+        {/* <Link href="/kritik-saran" className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 rounded-full text-gray-800 hover:bg-gray-100 transition">
+          <FaCommentDots size={18} /> Kritik & Saran
+        </Link> */}
+      </div>
+
+      <footer className="mt-5 text-center text-sm text-gray-400">© {new Date().getFullYear()} IamSuryana. All rights reserved.</footer>
     </div>
   );
 }
