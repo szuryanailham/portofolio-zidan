@@ -36,7 +36,7 @@ export default function Home() {
         <Link href="/portofolio" className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-full shadow hover:bg-gray-800 transition">
           <FaRegImages size={18} /> Lihat Portfolio
         </Link>
-        <Link href="/portfolio" className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 rounded-full text-gray-800 hover:bg-gray-100 transition">
+        <Link href="/paket-harga" className="w-full flex items-center justify-center gap-2 px-6 py-3 border border-gray-400 rounded-full text-gray-800 hover:bg-gray-100 transition">
           <FaTags size={18} /> Paket Harga
         </Link>
         <a
