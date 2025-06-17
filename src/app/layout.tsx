@@ -24,10 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        <footer className="mt-10 text-center text-xs text-gray-500 tracking-wide">
+          © {new Date().getFullYear()}{" "}
+          <a href="https://ilham-portofolio-neon.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-300 transition">
+            Ilham Suryana
+          </a>{" "}
+          — All rights reserved.
+        </footer>
       </body>
     </html>
   );
